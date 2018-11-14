@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class PagesController extends Controller
+{
+    public function home() {
+      return view('pages.home');
+    }
+
+    public function student_registration() {
+      return view('pages.student_registration');
+    }
+
+    public function faculty_registration(){
+      return view('pages.faculty_registration');
+    }
+}
