@@ -1,4 +1,4 @@
 INSERT INTO StudentResponses VALUES 
-(NULL,'1','1', 'Corrected', 'Yes'), 
-(NULL,'2','2', 'Not veirfied yet, 'No'),
-(NULL,'3','3', 'Seen', 'No');
+(NULL,'1','1', 'Corrected', '1'), 
+(NULL,'2','2', 'Not veirfied yet', '0'),
+(NULL,'3','3', 'Seen', '0');
