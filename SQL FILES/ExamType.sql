@@ -1,4 +1,4 @@
 INSERT INTO ExamType VALUES 
 (NULL,'1','100'),
-(NULL,'3','100'),
+(NULL,'2','100'),
 (NULL,'3','100');
