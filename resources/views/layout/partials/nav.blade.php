@@ -142,7 +142,7 @@
                     <a href="#"><i class="fa fa-edit fa-fw"></i> Registration <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="/StudentRegistration">Student Registration</a>
+                            <a href="/Student/create">Student Registration</a>
                         </li>
                         <li>
                             <a href="/FacultyRegistration">Faculty Registration</a>

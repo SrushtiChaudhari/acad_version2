@@ -10,10 +10,6 @@ class PagesController extends Controller
       return view('pages.home');
     }
 
-    public function student_registration() {
-      return view('pages.student_registration');
-    }
-
     public function faculty_registration(){
       return view('pages.faculty_registration');
     }

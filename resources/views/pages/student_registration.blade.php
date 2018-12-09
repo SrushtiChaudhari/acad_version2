@@ -17,7 +17,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form">
+                                    <form role="form" method="post" action="/Student/">
 
   <TABLE BORDER="0">
   <TR>
