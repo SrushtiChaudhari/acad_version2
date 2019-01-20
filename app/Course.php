@@ -6,11 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $CourseID
+ * @property int $DepartmentID
  * @property string $CourseName
  * @property string $CourseAbbreviation
  * @property string $CourseCode
  * @property string $SyllabusCode
  * @property boolean $IsTheory
+ * @property int $CourseCredits
+ * @property int $TotalTeachingHours
+ * @property string $created_at
+ * @property string $updated_at
+ * @property Department $department
  * @property CourseCurriculumMapping[] $courseCurriculumMappings
  * @property Enrollment[] $enrollments
  * @property Exam[] $exams
@@ -35,7 +41,15 @@ class Course extends Model
     /**
      * @var array
      */
-    protected $fillable = ['CourseName', 'CourseAbbreviation', 'CourseCode', 'SyllabusCode', 'IsTheory'];
+    protected $fillable = ['DepartmentID', 'CourseName', 'CourseAbbreviation', 'CourseCode', 'SyllabusCode', 'IsTheory', 'CourseCredits', 'TotalTeachingHours', 'created_at', 'updated_at'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function department()
+    {
+        return $this->belongsTo('App\Department', 'DepartmentID', 'DepartmentID');
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
