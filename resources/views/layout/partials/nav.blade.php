@@ -1,162 +1,91 @@
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+@extends('layout.partials.head')
+<div id="wrapper">
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="{{ url('/') }}">Academic Administration System- ACAD</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ACAD-Academic Adminstration</a>
     </div>
     <!-- /.navbar-header -->
-
-    <ul class="nav navbar-top-links navbar-right">
-        <li class="dropdown">
-
-            <ul class="dropdown-menu dropdown-messages">
-            </ul>
-            <!-- /.dropdown-messages -->
-        </li>
-        <!-- /.dropdown -->
-        <li class="dropdown">
-
-            <ul class="dropdown-menu dropdown-tasks">
-
-            </ul>
-            <!-- /.dropdown-tasks -->
-        </li>
-        <!-- /.dropdown -->
-        <li class="dropdown">
-
-            <ul class="dropdown-menu dropdown-alerts">
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa fa-comment fa-fw"></i> New Comment
-                            <span class="pull-right text-muted small">4 minutes ago</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                            <span class="pull-right text-muted small">12 minutes ago</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa fa-envelope fa-fw"></i> Message Sent
-                            <span class="pull-right text-muted small">4 minutes ago</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa fa-tasks fa-fw"></i> New Task
-                            <span class="pull-right text-muted small">4 minutes ago</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                            <span class="pull-right text-muted small">4 minutes ago</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a class="text-center" href="#">
-                        <strong>See All Alerts</strong>
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </li>
-            </ul>
-            <!-- /.dropdown-alerts -->
-        </li>
-        <!-- /.dropdown -->
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-user">
-                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                </li>
-                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                </li>
-                <li class="divider"></li>
-                <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                </li>
-            </ul>
-            <!-- /.dropdown-user -->
-        </li>
-        <!-- /.dropdown -->
-    </ul>
-    <!-- /.navbar-top-links -->
-
     <div class="navbar-default sidebar" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-                <li class="sidebar-search">
-                    <div class="input-group custom-search-form">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                    </div>
-                    <!-- /input-group -->
-                </li>
-                <li>
-                    <a href="/"><i class="fa fa-dashboard fa-fw"></i> Home</a>
-
-
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Profile <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">Personal Profile</a>
-                        </li>
-                        <li>
-                            <a href="#">Academic Profiles</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-table fa-fw"></i> Admission</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-edit fa-fw"></i> Registration <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="/Student/create">Student Registration</a>
-                        </li>
-                        <li>
-                            <a href="/FacultyRegistration">Faculty Registration</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-              </li>
-
-
-
+      <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+          <li class="sidebar-search">
+            <div class="input-group custom-search-form">
+              <input type="text" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+              <button class="btn btn-default" type="button">
+              <i class="fa fa-search"></i>
+              </button>
+              </span>
+            </div>
+            <!-- /input-group -->
+          </li>
+          <li>
+            <a href="/">Dashboard</a>
+          </li>
+          <li>
+            <a href="#">Department<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li><a href="/Department/create">Add a new Department</a></li>
+                <li><a href="/Department">View Departments</a></li>
+                <li><a href="/show_edit/Department">Edit existing Department</a></li>
+                <li><a href="/show_delete/Department">Delete Department</a></li>
             </ul>
-        </div>
-        <!-- /.sidebar-collapse -->
+          </li>
+          <li>
+            <a href="#">Courses<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+              <li><a href="/Course/create">Add a new Course</a></li>
+              <li><a href="/Course">View Courses</a></li>
+              <li><a href="/show_edit/Course">Edit existing Course</a></li>
+              <li><a href="/show_delete/Course">Delete Course</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Curriculum<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li><a href="/Curriculum/create">Add a new Curriclum</a></li>
+                <li><a href="/Curriculum">View Curriculums</a></li>
+                <li><a href="/show_edit/Curriculum">Edit Curriculum</a></li>
+                <li><a href="/show_delete/Curriculum">Delete Curriculum</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Course Curriculum Mapping<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li><a href="/CourseCurriculumMapping/create">Add a new Course Curriclum Mapping</a></li>
+                <li><a href="/CourseCurriculumMapping">View Course Curriculum Mappings</a></li>
+                <li><a href="/show_edit/CourseCurriculumMapping">Edit Mappings</a></li>
+                <li><a href="/show_delete/CourseCurriculumMapping">Delete Mappings</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Program<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li><a href="/Program/create">Add a new Program</a></li>
+                <li><a href="/Program">View Programs</a></li>
+                <li><a href="/show_edit/Program">Edit Program</a></li>
+                <li><a href="/show_delete/Program">Delete Program</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Semester<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li><a href="/Semester/create">Add a new Semester</a></li>
+                <li><a href="/Semester">View Semesters</a></li>
+                <li><a href="/show_edit/Semester">Edit Semester</a></li>
+                <li><a href="/show_delete/Semester">Delete Semester</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+                <!-- /.sidebar-collapse -->
     </div>
-    <!-- /.navbar-static-side -->
+            <!-- /.navbar-static-side -->
 </nav>
