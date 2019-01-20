@@ -6,6 +6,7 @@
   <body>
     @include('layout.partials.nav')
       @include('layout.partials.header')
+    @include('flash-messages')
     @yield('content')
 
     @include('layout.partials.footer')
