@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $CourseCurriculumMappingID
+ * @property int $CurriculumID
  * @property int $CourseID
- * @property int $CourseCredits
  * @property int $SemesterNumber
+ * @property string $created_at
+ * @property string $updated_at
  * @property Course $course
- * @property Curriculum[] $curricula
+ * @property Curriculum $curriculum
  */
 class CourseCurriculumMapping extends Model
 {
@@ -31,7 +33,7 @@ class CourseCurriculumMapping extends Model
     /**
      * @var array
      */
-    protected $fillable = ['CourseID', 'CourseCredits', 'SemesterNumber'];
+    protected $fillable = ['CurriculumID', 'CourseID', 'SemesterNumber', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -42,10 +44,10 @@ class CourseCurriculumMapping extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function curricula()
+    public function curriculum()
     {
-        return $this->hasMany('App\Curriculum', 'CourseCurriculumMappingID', 'CourseCurriculumMappingID');
+        return $this->belongsTo('App\Curriculum', 'CurriculumID', 'CurriculumID');
     }
 }
