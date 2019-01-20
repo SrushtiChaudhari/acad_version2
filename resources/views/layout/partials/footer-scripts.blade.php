@@ -13,4 +13,4 @@
 <script src="{{ asset('js/morris-data.js') }}"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="{{ asset('js/dist/js/sb-admin-2.js') }}"></script>
+<script src="{{ asset('js/dict/sb-admin-2.js') }}"></script>
