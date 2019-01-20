@@ -13,6 +13,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $FaxNo
  * @property string $PhoneNo
  * @property string $Email
+ * @property string $created_at
+ * @property string $updated_at
+ * @property Course[] $courses
  * @property Faculty[] $faculties
  * @property Program[] $programs
  */
@@ -35,7 +38,15 @@ class Department extends Model
     /**
      * @var array
      */
-    protected $fillable = ['DepartmentAbbreviation', 'DepartmentName', 'DepartmentCode', 'EstablishmentYear', 'FaxNo', 'PhoneNo', 'Email'];
+    protected $fillable = ['DepartmentAbbreviation', 'DepartmentName', 'DepartmentCode', 'EstablishmentYear', 'FaxNo', 'PhoneNo', 'Email', 'created_at', 'updated_at'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function courses()
+    {
+        return $this->hasMany('App\Course', 'DepartmentID', 'DepartmentID');
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
