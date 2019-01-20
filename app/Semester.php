@@ -13,6 +13,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $SemesterType
  * @property int $SemesterNumber
  * @property boolean $IsCurrent
+ * @property string $created_at
+ * @property string $updated_at
  * @property Program $program
  * @property Enrollment[] $enrollments
  * @property FacultyCourseMapping[] $facultyCourseMappings
@@ -23,14 +25,14 @@ class Semester extends Model
 {
     /**
      * The table associated with the model.
-     * 
+     *
      * @var string
      */
     protected $table = 'Semester';
 
     /**
      * The primary key for the model.
-     * 
+     *
      * @var string
      */
     protected $primaryKey = 'SemesterID';
@@ -38,7 +40,7 @@ class Semester extends Model
     /**
      * @var array
      */
-    protected $fillable = ['ProgramID', 'MaxCredit', 'MinCredit', 'DurationInMonths', 'SemesterType', 'SemesterNumber', 'IsCurrent'];
+    protected $fillable = ['ProgramID', 'MaxCredit', 'MinCredit', 'DurationInMonths', 'SemesterType', 'SemesterNumber', 'IsCurrent', 'created_at', 'updated_at'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
