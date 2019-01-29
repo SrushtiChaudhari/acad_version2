@@ -43,3 +43,15 @@ Route::get('/show_delete/Program', 'PagesController@program_show_delete');
 Route::resource('Semester', 'SemesterController');
 Route::get('/show_edit/Semester', 'PagesController@semester_show_edit');
 Route::get('/show_delete/Semester', 'PagesController@semester_show_delete');
+
+/*Routes for Faculty Model*/
+Route::resource('Faculty','FacultyController');
+Route::get('/show_edit/Faculty', 'PagesController@faculty_show_edit');
+Route::get('/show_delete/Faculty', 'PagesController@faculty_show_delete');
+
+/*Routes for Student Model*/
+Route::resource('Student','StudentController');
+Route::get('/show_edit/Student', 'PagesController@student_show_edit');
+Route::get('/show_delete/Student', 'PagesController@student_show_delete');
+
+

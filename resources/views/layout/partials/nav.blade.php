@@ -83,6 +83,27 @@
                 <li><a href="/show_delete/Semester">Delete Semester</a></li>
             </ul>
           </li>
+
+  <li>
+            <a href="#">Faculty<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li><a href="/Faculty/create">Add a new Faculty</a></li>
+                <li><a href="/Faculty">View Faculty</a></li>
+                <li><a href="/show_edit/Faculty">Edit Faculty</a></li>
+                <li><a href="/show_delete/Faculty">Delete Faculty</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Student<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+                <li><a href="/Student/create">Add a new Student</a></li>
+                <li><a href="/Student">View Student</a></li>
+                <li><a href="/show_edit/Student">Edit Student</a></li>
+                <li><a href="/show_delete/Student">Delete Student</a></li>
+            </ul>
+          </li>
+
         </ul>
       </div>
                 <!-- /.sidebar-collapse -->
